@@ -62,51 +62,53 @@ const ProjectsPage: React.FC = () => {
                     For all tastes and all desires
                 </Typography>
                 <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
-                    {projects.map((project) => (
-                        <ImageIconButton
-                            key={project.title}
-                            style={{
-                                width: project.width,
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    position: 'absolute',
-                                    left: 0,
-                                    right: 0,
-                                    top: 0,
-                                    bottom: 0,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center 40%',
-                                    backgroundImage: `url(${project.url})`,
-                                }}
-                            />
-                            <ImageBackdrop className="imageBackdrop" />
-                            <Box
-                                sx={{
-                                    position: 'absolute',
-                                    left: 0,
-                                    right: 0,
-                                    top: 0,
-                                    bottom: 0,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: 'common.white',
+                    {
+                        projects.map((project) => (
+                            <ImageIconButton
+                                key={project.title}
+                                style={{
+                                    width: project.width,
                                 }}
                             >
-                                <Typography
-                                    component="h3"
-                                    variant="h6"
-                                    color="inherit"
-                                    className="imageTitle"
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        left: 0,
+                                        right: 0,
+                                        top: 0,
+                                        bottom: 0,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center 40%',
+                                        backgroundImage: `url(${project.url})`,
+                                    }}
+                                />
+                                <ImageBackdrop className="imageBackdrop" />
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        left: 0,
+                                        right: 0,
+                                        top: 0,
+                                        bottom: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: 'common.white',
+                                    }}
                                 >
-                                    {project.title}
-                                    <div className="imageMarked" />
-                                </Typography>
-                            </Box>
-                        </ImageIconButton>
-                    ))}
+                                    <Typography
+                                        component="h3"
+                                        variant="h6"
+                                        color="inherit"
+                                        className="imageTitle"
+                                    >
+                                        {project.title}
+                                        <div className="imageMarked" />
+                                    </Typography>
+                                </Box>
+                            </ImageIconButton>
+                        ))
+                    }
                 </Box>
             </Container>
         </MainLayout>
