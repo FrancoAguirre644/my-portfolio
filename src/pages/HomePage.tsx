@@ -1,6 +1,10 @@
-const HomePage = () => {
+import { MainLayout } from '../layouts/MainLayout';
+
+const HomePage: React.FC = () => {
     return (
-        <h1>HomePage!</h1>
+        <MainLayout>
+            <h1>HomePage!</h1>
+        </MainLayout>
     )
 }
 
