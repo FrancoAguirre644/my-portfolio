@@ -29,11 +29,11 @@ const rawTheme = createTheme({
         },
     },
     typography: {
-        fontFamily: "'Roboto', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         fontSize: 14,
-        fontWeightLight: 300, // Work Sans
-        fontWeightRegular: 400, // Work Sans
-        fontWeightMedium: 700, // Roboto Condensed
+        fontWeightLight: 200, // Work Sans
+        fontWeightRegular: 300, // Work Sans
+        fontWeightMedium: 400, // Roboto Condensed
     },
 });
 

@@ -123,7 +123,8 @@ const Navbar: React.FC = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box flexGrow={1} />
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link to={page.href} style={{ textDecoration: 'none' }}>
                 <Button

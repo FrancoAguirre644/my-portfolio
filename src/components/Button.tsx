@@ -17,7 +17,7 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
         fontSize: theme.typography.pxToRem(13),
     }),
     ...(size === 'large' && {
-        padding: theme.spacing(2, 5),
+        padding: theme.spacing(2, 4),
         fontSize: theme.typography.pxToRem(16),
     }),
 }));

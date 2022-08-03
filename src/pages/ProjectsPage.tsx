@@ -4,7 +4,8 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 import { MainLayout } from "../layouts/MainLayout";
-import { projects } from '../data/projects';
+import { projects } from '../data/index';
+import { Grow } from '@mui/material';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
     position: 'absolute',
@@ -61,55 +62,57 @@ const ProjectsPage: React.FC = () => {
                 <Typography variant="h4" marked="center" align="center" component="h2">
                     For all tastes and all desires
                 </Typography>
-                <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
-                    {
-                        projects.map((project) => (
-                            <ImageIconButton
-                                key={project.title}
-                                style={{
-                                    width: project.width,
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        left: 0,
-                                        right: 0,
-                                        top: 0,
-                                        bottom: 0,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center 40%',
-                                        backgroundImage: `url(${project.url})`,
-                                    }}
-                                />
-                                <ImageBackdrop className="imageBackdrop" />
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        left: 0,
-                                        right: 0,
-                                        top: 0,
-                                        bottom: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        color: 'common.white',
+                <Grow in>
+                    <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
+                        {
+                            projects.map((project) => (
+                                <ImageIconButton
+                                    key={project.title}
+                                    style={{
+                                        width: project.width,
                                     }}
                                 >
-                                    <Typography
-                                        component="h3"
-                                        variant="h6"
-                                        color="inherit"
-                                        className="imageTitle"
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            left: 0,
+                                            right: 0,
+                                            top: 0,
+                                            bottom: 0,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center 40%',
+                                            backgroundImage: `url(${project.url})`,
+                                        }}
+                                    />
+                                    <ImageBackdrop className="imageBackdrop" />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            left: 0,
+                                            right: 0,
+                                            top: 0,
+                                            bottom: 0,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            color: 'common.white',
+                                        }}
                                     >
-                                        {project.title}
-                                        <div className="imageMarked" />
-                                    </Typography>
-                                </Box>
-                            </ImageIconButton>
-                        ))
-                    }
-                </Box>
+                                        <Typography
+                                            component="h3"
+                                            variant="h6"
+                                            color="inherit"
+                                            className="imageTitle"
+                                        >
+                                            {project.title}
+                                            <div className="imageMarked" />
+                                        </Typography>
+                                    </Box>
+                                </ImageIconButton>
+                            ))
+                        }
+                    </Box>
+                </Grow>
             </Container>
         </MainLayout>
     )
