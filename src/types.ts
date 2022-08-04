@@ -3,3 +3,8 @@ export interface Skill {
     title: string,
     type: string,
 }
+
+export interface Menu {
+    url: string,
+    title: string,
+}

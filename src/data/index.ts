@@ -95,3 +95,4 @@ export const skills: Skill[] = [
         type: 'tool',
     }
 ];
+

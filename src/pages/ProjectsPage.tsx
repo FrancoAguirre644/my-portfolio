@@ -58,7 +58,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 const ProjectsPage: React.FC = () => {
     return (
         <MainLayout>
-            <Container component="section" sx={{ m: 4 }}>
+            <Container component="section" sx={{ p: 4 }}>
                 <Typography variant="h4" marked="center" align="center" component="h2">
                     For all tastes and all desires
                 </Typography>
