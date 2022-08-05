@@ -1,4 +1,6 @@
-export const menu = [
+import { MenuItem } from "../types";
+
+export const menu: MenuItem[] = [
     {
         title: 'About Me',
         url: '/about'

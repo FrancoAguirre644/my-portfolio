@@ -1,35 +1,84 @@
-import { Skill } from "../types";
+import { Project, Skill } from "../types";
 
-export const projects = [
+export const projects: Project[] = [
     {
-        url: 'https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400',
-        title: 'Snorkeling',
+        url: '/images/projects/blog.jpg',
+        title: 'Blog',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '40%',
+        stack: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
+            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg',
+            'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg'
+        ],
+        urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     },
     {
-        url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
-        title: 'Massage',
-        width: '20%',
+        url: '/images/projects/ecommerce.jpg',
+        title: 'E-commerce',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        width: '30%',
+        stack: [
+            'https://cdn.worldvectorlogo.com/logos/next-js.svg',
+            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg',
+            'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg'
+        ],
+        urlProduction: 'https://next-ecommerce-rho.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/next-ecommerce'
     },
     {
-        url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
-        title: 'Hiking',
-        width: '40%',
+        url: '/images/projects/challenge.jpg',
+        title: 'Challenge FullStack',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        width: '30%',
+        stack: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
+            'https://cdn.worldvectorlogo.com/logos/material-ui-1.svg',
+            'https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png'
+        ],
+        urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/alkemy-challenge-fullstack'
     },
     {
-        url: 'https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400',
-        title: 'Tour',
+        url: '/images/projects/chat.jpg',
+        title: 'Chat',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '38%',
+        stack: [
+            'https://upload.wikimedia.org/wikipedia/en/2/29/Quasar_Logo.png',
+            'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
+        ],
+        urlProduction: 'https://quasar-chat.netlify.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/chat-app-quasar'
     },
     {
         url: 'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400',
         title: 'Gastronomy',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '38%',
+        stack: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
+            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg'
+        ],
+        urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     },
     {
         url: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400',
         title: 'Shopping',
+        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '24%',
+        stack: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
+            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg'
+        ],
+        urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     }
 ];
 
@@ -70,8 +119,13 @@ export const skills: Skill[] = [
         type: 'backend',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/flask.svg',
-        title: 'Flask',
+        url: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg',
+        title: 'MongoDB',
+        type: 'backend',
+    },
+    {
+        url: 'https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png',
+        title: 'MySQL',
         type: 'backend',
     },
     {
