@@ -1,15 +1,16 @@
 import React from 'react';
 import { Avatar, AvatarGroup, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material';
 import { Project } from '../types';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CloseIcon from '@mui/icons-material/Close';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TerminalIcon from '@mui/icons-material/Terminal';
 
 interface ProjectCardProps {
     project: Project;
+    closeDialog: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, closeDialog }) => (
     <Card>
         <CardHeader
             avatar={
@@ -22,12 +23,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
                 </AvatarGroup>
             }
             action={
-                <IconButton aria-label="settings">
-                    <MoreVertIcon />
+                <IconButton onClick={() => closeDialog()}>
+                    <CloseIcon />
                 </IconButton>
             }
             title={project.title}
-            subheader="September 14, 2016"
         />
         <CardMedia
             component="img"

@@ -17,7 +17,7 @@ const ProjectsPage: React.FC = () => {
                     <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
                         {
                             projects.map((project) => (
-                                <ProjectDialog key={project.title} title="Project #1" project={project} />
+                                <ProjectDialog key={project.title} project={project} />
                             ))
                         }
                     </Box>

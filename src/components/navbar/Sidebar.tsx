@@ -31,7 +31,9 @@ const Sidebar: React.FC = () => {
 
   const list = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: '250', height: '100%', backgroundColor: 'primary.main', color: 'white' }}
+      justifyContent='center'
+      alignItems='center'
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
@@ -42,8 +44,8 @@ const Sidebar: React.FC = () => {
             <Link key={index} to={item.url} style={{ textDecoration: 'none' }}>
               <ListItem key={index}>
                 <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <ListItemIcon >
+                    {index % 2 === 0 ? <InboxIcon color='secondary' /> : <MailIcon color='secondary' />}
                   </ListItemIcon>
                   <ListItemText primary={item.title} />
                 </ListItemButton>

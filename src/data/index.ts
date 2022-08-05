@@ -144,9 +144,28 @@ export const skills: Skill[] = [
         type: 'tool',
     },
     {
+        url: 'https://cdn.worldvectorlogo.com/logos/typescript-2.svg',
+        title: 'Typescript',
+        type: 'tool',
+    },
+    {
         url: 'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
         title: 'Firebase',
         type: 'tool',
     }
 ];
+
+export const personalData = {
+    description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Hic ratione asperiores dignissimos quis voluptates esse,
+        laboriosam ab placeat in quasi eligendi consequatur id, animi ducimus.
+        Itaque dolorum cum consequuntur unde ipsa voluptates est qui eligendi,
+        illum quidem quod accusantium alias assumenda repellat repellendus
+        facilis vero voluptate totam quaerat perspiciatis doloribus.
+        illum quidem quod accusantium alias assumenda repellat repellendus
+        facilis vero voluptate totam quaerat perspiciatis doloribus.
+    `,
+    photo: 'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
+}
 

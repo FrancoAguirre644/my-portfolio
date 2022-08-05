@@ -10,8 +10,8 @@ import { MainLayout } from '../layouts/MainLayout';
 import { Fade } from '@mui/material';
 
 const ContactPage: React.FC = () => {
-    
-    const [open, setOpen] = React.useState(false);
+
+    const [open, setOpen] = React.useState<boolean>(false);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
