@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
 import Button from "@mui/material/Button";
-import { makeStyles, styled, Theme } from "@mui/material";
 import { MainLayout } from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
-import SocialMedia from "../components/SocialMedia";
 
-export default function HeroSection() {
+const HomePage: React.FC = () => {
 
     return (
         <MainLayout>
@@ -21,19 +19,6 @@ export default function HeroSection() {
                     justifyContent: 'center',
                 }}
             >
-                <iframe
-                    title="background-3d"
-                    src="https://my.spline.design/awesomefolio-0c39efc3de701ba97be395cc128e4e2f/"
-                    frameBorder="0"
-                    height="100%"
-                    style={{
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        width: "100%",
-                        maxWidth: "600px",
-                    }}
-                ></iframe>
                 <Typography color="inherit" align="center" variant="h2" marked="center">
                     Upgrade your Sundays
                 </Typography>
@@ -64,3 +49,5 @@ export default function HeroSection() {
         </MainLayout>
     );
 }
+
+export default HomePage;

@@ -9,7 +9,6 @@ const Avatar = styled('img')(({ theme }) => ({
     width: "240px",
     height: "240px",
     objectFit: 'cover',
-    objectPosition: "0 -20px",
     boxShadow: theme.shadows[1]
 }));
 
@@ -32,7 +31,7 @@ const AboutPage: React.FC = () => {
                             {personalData.description}
                         </Typography>
                         <Divider sx={{ py: 1 }} />
-                        <SocialMedia />
+                        <SocialMedia socialMediaItems={personalData.socialMedia} />
                     </Grid>
                     <Grid item md={4} p={4} order={{ xs: 1, md: 2, lg: 2 }}>
                         <Avatar src={personalData.photo} alt="Franco Aguirre" />

@@ -12,9 +12,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { menu } from '../../data/menu-helper';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
+
+  const location = useLocation();
 
   const [open, setOpen] = React.useState<boolean>(false);
 
@@ -31,7 +33,7 @@ const Sidebar: React.FC = () => {
 
   const list = () => (
     <Box
-      sx={{ width: '250', height: '100%', backgroundColor: 'primary.main', color: 'white' }}
+      sx={{ width: '270', height: '100%', backgroundColor: 'primary.main', color: 'white' }}
       justifyContent='center'
       alignItems='center'
       role="presentation"
@@ -43,7 +45,17 @@ const Sidebar: React.FC = () => {
           menu.map((item, index) => (
             <Link key={index} to={item.url} style={{ textDecoration: 'none' }}>
               <ListItem key={index}>
-                <ListItemButton>
+                <ListItemButton className={location.pathname === item.url ? 'active' : ''}
+                  sx={{ 
+                    "&.active": {
+                      color: 'secondary.main',
+                      borderBottomColor: 'secondary.main',
+                      borderBottomStyle: 'solid',
+                      borderBottomWidth: '2px',
+                      borderRadius: 0
+                    },
+                  }}
+                >
                   <ListItemIcon >
                     {index % 2 === 0 ? <InboxIcon color='secondary' /> : <MailIcon color='secondary' />}
                   </ListItemIcon>

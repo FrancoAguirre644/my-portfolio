@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import FaceIcon from '@mui/icons-material/Face';
 import Sidebar from './Sidebar';
 import { Link, useLocation } from 'react-router-dom';
 import { menu } from '../../data/menu-helper';
@@ -18,7 +17,6 @@ const Navbar: React.FC = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar>
-          <FaceIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Link to={"/"} style={{ textDecoration: 'none' }}>
             <Typography
               variant="h6"
@@ -35,7 +33,7 @@ const Navbar: React.FC = () => {
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              Franco Aguirre
             </Typography>
           </Link>
 
@@ -60,7 +58,7 @@ const Navbar: React.FC = () => {
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              Franco Aguirre
             </Typography>
           </Link>
 

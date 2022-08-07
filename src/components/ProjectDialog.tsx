@@ -98,7 +98,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ project }) => {
                         bottom: 0,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center 40%',
-                        backgroundImage: `url(${project.url})`,
+                        backgroundImage: `url(${project.urlImg})`,
                     }}
                 />
                 <ImageBackdrop />

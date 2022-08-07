@@ -1,82 +1,72 @@
-import { Project, Skill } from "../types";
+import { PersonalData, Project, Skill } from "../types";
+import GithubIcon from "@mui/icons-material/GitHub";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export const projects: Project[] = [
     {
-        url: '/images/projects/blog.jpg',
         title: 'Blog',
         description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '40%',
         stack: [
-            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
-            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg',
-            'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg'
+            '/images/skills/react.svg',
+            '/images/skills/nodejs.png',
+            '/images/skills/bootstrap.svg',
+            '/images/skills/mongodb.svg'
         ],
+        urlImg: '/images/projects/blog.jpg',
         urlProduction: 'https://mern-blog-app-five.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     },
     {
-        url: '/images/projects/ecommerce.jpg',
         title: 'E-commerce',
         description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '30%',
         stack: [
-            'https://cdn.worldvectorlogo.com/logos/next-js.svg',
-            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg',
-            'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg'
+            '/images/skills/next-js.svg',
+            '/images/skills/bootstrap.svg',
+            '/images/skills/mongodb.svg'
         ],
+        urlImg: '/images/projects/ecommerce.jpg',
         urlProduction: 'https://next-ecommerce-rho.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/next-ecommerce'
     },
     {
-        url: '/images/projects/challenge.jpg',
         title: 'Challenge FullStack',
         description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         width: '30%',
         stack: [
-            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
-            'https://cdn.worldvectorlogo.com/logos/material-ui-1.svg',
-            'https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png'
+            '/images/skills/react.svg',
+            '/images/skills/nodejs.png',
+            '/images/skills/material-ui.svg',
+            '/images/skills/mysql.png'
         ],
+        urlImg: '/images/projects/challenge.jpg',
         urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/alkemy-challenge-fullstack'
     },
     {
-        url: '/images/projects/chat.jpg',
         title: 'Chat',
         description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-        width: '38%',
+        width: '50%',
         stack: [
-            'https://upload.wikimedia.org/wikipedia/en/2/29/Quasar_Logo.png',
-            'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
+            '/images/skills/quasar.png',
+            '/images/skills/firebase.svg',
         ],
+        urlImg: '/images/projects/chat.jpg',
         urlProduction: 'https://quasar-chat.netlify.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/chat-app-quasar'
     },
     {
-        url: 'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400',
-        title: 'Gastronomy',
+        title: 'Order food',
         description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-        width: '38%',
+        width: '50%',
         stack: [
-            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
-            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg'
+            '/images/skills/react.svg',
+            '/images/skills/nodejs.png',
+            '/images/skills/bootstrap.svg'
         ],
-        urlProduction: 'https://mern-blog-app-five.vercel.app/',
-        urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
-    },
-    {
-        url: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400',
-        title: 'Shopping',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-        width: '24%',
-        stack: [
-            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-            'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
-            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg'
-        ],
+        urlImg: '/images/projects/ecommerce.jpg',
         urlProduction: 'https://mern-blog-app-five.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     }
@@ -84,88 +74,102 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/react-2.svg',
         title: 'React JS',
+        url: '/images/skills/react.svg',
         type: 'frontend'
     },
     {
-        url: 'https://coryrylan.com/assets/images/posts/types/vue-1280x960.png',
         title: 'Vue JS',
+        url: '/images/skills/vue.png',
         type: 'frontend'
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg',
         title: 'Bootstrap',
+        url: '/images/skills/bootstrap.svg',
         type: 'frontend'
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/material-ui-1.svg',
         title: 'Material UI',
+        url: '/images/skills/material-ui.svg',
         type: 'frontend',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/spring-3.svg',
         title: 'Spring',
+        url: '/images/skills/spring.svg',
         type: 'backend',
     },
     {
-        url: 'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png',
         title: 'Node JS',
+        url: '/images/skills/nodejs.png',
         type: 'backend',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/symfony.svg',
         title: 'Symfony',
+        url: '/images/skills/symfony.svg',
         type: 'backend',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg',
         title: 'MongoDB',
+        url: '/images/skills/mongodb.svg',
         type: 'backend',
     },
     {
-        url: 'https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png',
         title: 'MySQL',
+        url: '/images/skills/mysql.png',
         type: 'backend',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg',
         title: 'Visual Studio Code',
+        url: '/images/skills/vscode.svg',
         type: 'tool',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/linux-tux.svg',
         title: 'Linux',
+        url: '/images/skills/linux.svg',
         type: 'tool',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/github-icon-1.svg',
         title: 'Github/Gitlab',
+        url: '/images/skills/github.svg',
         type: 'tool',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/typescript-2.svg',
         title: 'Typescript',
+        url: '/images/skills/typescript.svg',
         type: 'tool',
     },
     {
-        url: 'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
         title: 'Firebase',
+        url: '/images/skills/firebase.svg',
         type: 'tool',
     }
 ];
 
-export const personalData = {
+export const personalData: PersonalData = {
     description: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Hic ratione asperiores dignissimos quis voluptates esse,
-        laboriosam ab placeat in quasi eligendi consequatur id, animi ducimus.
-        Itaque dolorum cum consequuntur unde ipsa voluptates est qui eligendi,
-        illum quidem quod accusantium alias assumenda repellat repellendus
-        facilis vero voluptate totam quaerat perspiciatis doloribus.
-        illum quidem quod accusantium alias assumenda repellat repellendus
-        facilis vero voluptate totam quaerat perspiciatis doloribus.
+        I'm a software developer from Buenos Aires, Argentina. 
+        Currently studying a degree in systems in UNLa. I really enjoy both designing user interfaces and 
+        developing server-side code. 
+        Lately I'm entering the mobile world while perfecting myself in web development.
+        When I'm not coding, i do other activities like playing guitar and drawing.
     `,
-    photo: 'https://cdn.worldvectorlogo.com/logos/firebase-1.svg',
+    photo: '/images/profile/my_photo.jpeg',
+    socialMedia: [
+        {
+            name: "github",
+            icon: GithubIcon,
+            url: "https://github.com/FrancoAguirre644",
+        },
+        {
+            name: "whatsapp",
+            icon: WhatsAppIcon,
+            url: "https://api.whatsapp.com/send?phone=541139418118&text=Hi%20Franco!%20%F0%9F%91%8B",
+        },
+        {
+            name: "linkedin",
+            icon: LinkedInIcon,
+            url: "https://www.linkedin.com/in/franco-aguirre-6b5739194/",
+        },
+    ]
 }
 

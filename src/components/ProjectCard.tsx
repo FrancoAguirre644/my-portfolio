@@ -32,8 +32,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, closeDialog }) => (
         <CardMedia
             component="img"
             height="194"
-            src={project.url}
-            alt="Paella dish"
+            src={project.urlImg}
+            alt="project"
         />
         <CardContent sx={{ textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">
