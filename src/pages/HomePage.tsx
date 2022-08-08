@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import { MainLayout } from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
 import { Grid, Hidden } from "@mui/material";
+import Typed from 'react-typed';
 
 const HomePage: React.FC = () => {
 
@@ -21,18 +22,18 @@ const HomePage: React.FC = () => {
             >
                 <Grid container>
                     <Grid item md={6}>
-                        <Typography color="inherit" variant="h4" marked="left">
-                            Hi
+                        <Typography color="inherit" variant="h4" marked="left" sx={{ fontWeight: 700 }}>
+                            <Typed strings={["Hi"]} typeSpeed={40} />
                         </Typography>
-                        <Typography color="secondary" variant="h4" marked="left">
-                            I'm Franco Aguirre
+                        <Typography color="secondary" variant="h4" marked="left" sx={{ fontWeight: 700 }}>
+                            <Typed strings={["I'm Franco Aguirre"]} typeSpeed={40} />
                         </Typography>
                         <Typography
                             color="inherit"
                             variant="h5"
                             sx={{ my: 4 }}
                         >
-                            Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+                            Fullstack Developer from Buenos Aires, Argentina.
                         </Typography>
                         <Link to="/contact">
                             <Button
@@ -55,8 +56,8 @@ const HomePage: React.FC = () => {
                         flexDirection: 'column',
                         alignItems: 'flex-end',
                     }}>
-                        <Hidden>
-                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/code-3095842-2598685.png" alt="" width={500} />
+                        <Hidden mdDown>
+                            <img src="./images/others/code.webp" alt="codeimg" width={500} />
                         </Hidden>
                     </Grid>
                 </Grid>

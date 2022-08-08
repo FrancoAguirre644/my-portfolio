@@ -60,9 +60,12 @@ const ContactPage: React.FC = () => {
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'center',
-                                    bgcolor: 'warning.main',
+                                    bgcolor: 'white',
                                     py: 4,
                                     px: 2,
+                                    borderColor: 'primary',
+                                    borderStyle: 'solid',
+                                    borderWidth: 3
                                 }}
                             >
                                 <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
@@ -70,7 +73,6 @@ const ContactPage: React.FC = () => {
                                         Contact
                                     </Typography>
                                     <TextField
-                                        noBorder
                                         name="name"
                                         placeholder="Name"
                                         variant="standard"
@@ -78,7 +80,6 @@ const ContactPage: React.FC = () => {
                                         sx={{ width: '100%', mt: 1, mb: 1 }}
                                     />
                                     <TextField
-                                        noBorder
                                         name="email"
                                         type="email"
                                         placeholder="Email"
@@ -87,7 +88,6 @@ const ContactPage: React.FC = () => {
                                         sx={{ width: '100%', mt: 1, mb: 1 }}
                                     />
                                     <TextField
-                                        noBorder
                                         name="message"
                                         placeholder="Message"
                                         variant="standard"
@@ -121,12 +121,12 @@ const ContactPage: React.FC = () => {
                                     right: 0,
                                     bottom: 0,
                                     width: '100%',
-                                    background: 'url(https://gitlab.create-ion.at/lt/material-ui/-/raw/v4.0.2/static/themes/onepirate/productCTAImageDots.png)',
+                                    background: 'url(./images/others/background-contact.png)',
                                 }}
                             />
                             <Box
                                 component="img"
-                                src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
+                                src="./images/others/contact.webp"
                                 alt="call to action"
                                 sx={{
                                     position: 'absolute',

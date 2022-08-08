@@ -7,7 +7,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export const projects: Project[] = [
     {
         title: 'Blog',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        description: `
+            MERN Stack Build a blog app using MERN + Typescript + Redux + Bootstrap 5 + ReactQuill + Socket.io + Twilio.
+            Register, login with Email or Phone number.
+            Create new blog with React quill.
+            Comment realtime with Socket.io
+            Pagination, search with autocomplete Mongodb.
+        `,
         width: '40%',
         stack: [
             '/images/skills/react.svg',
@@ -21,7 +27,7 @@ export const projects: Project[] = [
     },
     {
         title: 'E-commerce',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        description: 'Build a E-commerce Full Stack with Nextjs + Mongodb + React Hook + Bootstrap 4.',
         width: '30%',
         stack: [
             '/images/skills/next-js.svg',
@@ -34,7 +40,7 @@ export const projects: Project[] = [
     },
     {
         title: 'Challenge FullStack',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        description: 'Fullstack challenge (MERN) with Typescript proposed by Alkemy.',
         width: '30%',
         stack: [
             '/images/skills/react.svg',
@@ -48,7 +54,7 @@ export const projects: Project[] = [
     },
     {
         title: 'Chat',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        description: 'Build Realtime chat using Vue 3, Quasar Framework, Realtime Database Firebase.',
         width: '50%',
         stack: [
             '/images/skills/quasar.png',
@@ -59,13 +65,12 @@ export const projects: Project[] = [
         urlGithub: 'https://github.com/FrancoAguirre644/chat-app-quasar'
     },
     {
-        title: 'Order food',
-        description: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+        title: 'Food order',
+        description: 'Online Food Order App on React Native using Typescript.',
         width: '50%',
         stack: [
             '/images/skills/react.svg',
-            '/images/skills/nodejs.png',
-            '/images/skills/bootstrap.svg'
+            '/images/skills/typescript.svg',
         ],
         urlImg: '/images/projects/orderFood.jpg',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'

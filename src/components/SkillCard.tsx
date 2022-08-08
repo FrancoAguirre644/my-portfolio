@@ -44,7 +44,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => (
                 }}
             >
                 <Box sx={{ width: '100%' }}>
-                    <LinearProgress variant="determinate" value={50} color="secondary" />
+                    <LinearProgress variant="determinate" value={50} color="primary" />
                 </Box>
             </Box>
         </CardContent>

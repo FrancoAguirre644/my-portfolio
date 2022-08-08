@@ -66,7 +66,7 @@ const styles = ({ theme }: { theme: Theme }) => ({
         display: 'block',
         marginTop: theme.spacing(0.5),
         backgroundColor: theme.palette.secondary.main,
-        fontWeight: 800
+        fontWeight: 800,
     },
 });
 

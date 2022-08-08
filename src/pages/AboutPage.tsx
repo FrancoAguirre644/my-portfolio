@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, styled } from "@mui/material";
+import { Container, Divider, Grid, Grow, styled } from "@mui/material";
 import SocialMedia from "../components/SocialMedia";
 import Typography from "../components/Typography";
 import { MainLayout } from "../layouts/MainLayout";
@@ -20,23 +20,25 @@ const AboutPage: React.FC = () => {
                 <Typography variant="h4" marked="center" align="center" component="h2">
                     About
                 </Typography>
-                <Grid
-                    container
-                    spacing={0}
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Grid item md={8} order={{ xs: 2, md: 1, lg: 1 }}>
-                        <Typography component="span">
-                            {personalData.description}
-                        </Typography>
-                        <Divider sx={{ py: 1 }} />
-                        <SocialMedia socialMediaItems={personalData.socialMedia} />
+                <Grow in>
+                    <Grid
+                        container
+                        spacing={0}
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <Grid item md={8} order={{ xs: 2, md: 1, lg: 1 }}>
+                            <Typography component="span">
+                                {personalData.description}
+                            </Typography>
+                            <Divider sx={{ py: 1 }} />
+                            <SocialMedia socialMediaItems={personalData.socialMedia} />
+                        </Grid>
+                        <Grid item md={4} p={4} order={{ xs: 1, md: 2, lg: 2 }}>
+                            <Avatar src={personalData.photo} alt="Franco Aguirre" />
+                        </Grid>
                     </Grid>
-                    <Grid item md={4} p={4} order={{ xs: 1, md: 2, lg: 2 }}>
-                        <Avatar src={personalData.photo} alt="Franco Aguirre" />
-                    </Grid>
-                </Grid>
+                </Grow>
             </Container>
         </MainLayout>
     )

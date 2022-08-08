@@ -16,8 +16,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, closeDialog }) => (
             avatar={
                 <AvatarGroup total={project.stack.length}>
                     {
-                        project.stack.map(stack => (
-                            <Avatar alt="Remy Sharp" src={stack} />
+                        project.stack.map((stack, index) => (
+                            <Avatar key={index} alt="stack" src={stack} />
                         ))
                     }
                 </AvatarGroup>

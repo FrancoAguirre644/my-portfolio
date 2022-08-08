@@ -16,8 +16,8 @@ const ProjectsPage: React.FC = () => {
                 <Grow in>
                     <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
                         {
-                            projects.map((project) => (
-                                <ProjectDialog key={project.title} project={project} />
+                            projects.map((project, index) => (
+                                <ProjectDialog key={index} project={project} />
                             ))
                         }
                     </Box>
