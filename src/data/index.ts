@@ -1,6 +1,7 @@
 import { PersonalData, Project, Skill } from "../types";
 import GithubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import MailIcon from '@mui/icons-material/MailOutlined';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export const projects: Project[] = [
@@ -66,8 +67,7 @@ export const projects: Project[] = [
             '/images/skills/nodejs.png',
             '/images/skills/bootstrap.svg'
         ],
-        urlImg: '/images/projects/ecommerce.jpg',
-        urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        urlImg: '/images/projects/orderFood.jpg',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     }
 ];
@@ -164,6 +164,11 @@ export const personalData: PersonalData = {
             name: "whatsapp",
             icon: WhatsAppIcon,
             url: "https://api.whatsapp.com/send?phone=541139418118&text=Hi%20Franco!%20%F0%9F%91%8B",
+        },
+        {
+            name: "email",
+            icon: MailIcon,
+            url: "mailto:francoaguirre644@gmail.com",
         },
         {
             name: "linkedin",

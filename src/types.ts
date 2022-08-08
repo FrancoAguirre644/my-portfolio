@@ -16,7 +16,7 @@ export interface Project {
     width: string;
     stack: string[];
     urlImg: string
-    urlProduction: string,
+    urlProduction?: string,
     urlGithub: string
 }
 
@@ -28,5 +28,6 @@ export interface PersonalData {
 
 export interface MenuItem {
     title: string,
+    icon: any;
     url: string,
 }

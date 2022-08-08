@@ -8,13 +8,41 @@ import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
 import { MainLayout } from '../layouts/MainLayout';
 import { Fade } from '@mui/material';
+import emailjs from 'emailjs-com';
 
 const ContactPage: React.FC = () => {
 
     const [open, setOpen] = React.useState<boolean>(false);
+    const [message, setMessage] = React.useState<string>("");
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const [contactForm, setContactForm] = React.useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setContactForm({ ...contactForm, [name]: value });
+    }
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        if (!contactForm.name || !contactForm.email || !contactForm.message) {
+            setMessage("Please complete all fields.");
+        } else {
+            emailjs.send('service_7tf6mtr', 'template_XDvVhAkd', contactForm, 'user_4WAJEjCbst5IW66yG17Ga')
+                .then(response => {
+                    console.log(response);
+                    setMessage("Message sent successfully.");
+
+                }, error => {
+                    console.log(error);
+                    setMessage("An error has occurred. please try again later.");
+                });
+        }
+
         setOpen(true);
     };
 
@@ -33,27 +61,39 @@ const ContactPage: React.FC = () => {
                                     display: 'flex',
                                     justifyContent: 'center',
                                     bgcolor: 'warning.main',
-                                    py: 8,
-                                    px: 3,
+                                    py: 4,
+                                    px: 2,
                                 }}
                             >
                                 <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
                                     <Typography variant="h2" component="h2">
-                                        Receive
-                                    </Typography>
-                                    <Typography variant="h5">
-                                        Taste the holidays of the everyday close.
+                                        Contact
                                     </Typography>
                                     <TextField
                                         noBorder
-                                        placeholder="Your email"
+                                        name="name"
+                                        placeholder="Name"
                                         variant="standard"
+                                        onChange={onChangeInput}
                                         sx={{ width: '100%', mt: 1, mb: 1 }}
                                     />
                                     <TextField
                                         noBorder
-                                        placeholder="Your email"
+                                        name="email"
+                                        type="email"
+                                        placeholder="Email"
                                         variant="standard"
+                                        onChange={onChangeInput}
+                                        sx={{ width: '100%', mt: 1, mb: 1 }}
+                                    />
+                                    <TextField
+                                        noBorder
+                                        name="message"
+                                        placeholder="Message"
+                                        variant="standard"
+                                        multiline
+                                        minRows={3}
+                                        onChange={onChangeInput}
                                         sx={{ width: '100%', mt: 1, mb: 1 }}
                                     />
                                     <Button
@@ -62,7 +102,7 @@ const ContactPage: React.FC = () => {
                                         variant="contained"
                                         sx={{ width: '100%' }}
                                     >
-                                        Keep me updated
+                                        Send message
                                     </Button>
                                 </Box>
                             </Box>
@@ -104,7 +144,7 @@ const ContactPage: React.FC = () => {
                 <Snackbar
                     open={open}
                     closeFunc={handleClose}
-                    message="We will send you our best offers, once a week."
+                    message={message}
                 />
             </Container>
         </MainLayout>

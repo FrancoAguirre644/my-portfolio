@@ -46,11 +46,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, closeDialog }) => (
                     <GitHubIcon />
                 </IconButton>
             </a>
-            <a href={project.urlProduction} target='_blank' rel="noopener noreferrer">
-                <IconButton aria-label="share">
-                    <TerminalIcon />
-                </IconButton>
-            </a>
+            {
+                project.urlProduction && (
+                    <a href={project.urlProduction} target='_blank' rel="noopener noreferrer">
+                        <IconButton aria-label="share">
+                            <TerminalIcon />
+                        </IconButton>
+                    </a>
+                )
+            }
+
         </CardActions>
     </Card>
 );

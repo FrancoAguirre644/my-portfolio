@@ -7,8 +7,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { menu } from '../../data/menu-helper';
@@ -46,7 +44,7 @@ const Sidebar: React.FC = () => {
             <Link key={index} to={item.url} style={{ textDecoration: 'none' }}>
               <ListItem key={index}>
                 <ListItemButton className={location.pathname === item.url ? 'active' : ''}
-                  sx={{ 
+                  sx={{
                     "&.active": {
                       color: 'secondary.main',
                       borderBottomColor: 'secondary.main',
@@ -56,8 +54,8 @@ const Sidebar: React.FC = () => {
                     },
                   }}
                 >
-                  <ListItemIcon >
-                    {index % 2 === 0 ? <InboxIcon color='secondary' /> : <MailIcon color='secondary' />}
+                  <ListItemIcon>
+                    <item.icon color="secondary" />
                   </ListItemIcon>
                   <ListItemText primary={item.title} />
                 </ListItemButton>
@@ -65,7 +63,7 @@ const Sidebar: React.FC = () => {
               <Divider />
             </Link>
           )
-        )}
+          )}
       </List>
     </Box>
   );

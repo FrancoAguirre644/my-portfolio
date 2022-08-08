@@ -17,7 +17,7 @@ const markClassesMapping: {
         h1: '',
         h2: '',
         h3: '',
-        h4: '',
+        h4: 'OnePirateTypography-markedH4Left',
         h5: '',
         h6: 'OnePirateTypography-markedH6Left',
     },
@@ -59,6 +59,14 @@ const styles = ({ theme }: { theme: Theme }) => ({
         display: 'block',
         marginTop: theme.spacing(0.5),
         background: 'currentColor',
+    },
+    [`& .${markClassesMapping.left.h4}`]: {
+        height: 4,
+        width: 55,
+        display: 'block',
+        marginTop: theme.spacing(0.5),
+        backgroundColor: theme.palette.secondary.main,
+        fontWeight: 800
     },
 });
 
