@@ -22,7 +22,7 @@ export const projects: Project[] = [
             '/images/skills/mongodb.svg'
         ],
         urlImg: '/images/projects/blog.jpg',
-        urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        //urlProduction: 'https://mern-blog-app-five.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     },
     {
@@ -35,7 +35,7 @@ export const projects: Project[] = [
             '/images/skills/mongodb.svg'
         ],
         urlImg: '/images/projects/ecommerce.jpg',
-        urlProduction: 'https://next-ecommerce-rho.vercel.app/',
+        //urlProduction: 'https://next-ecommerce-rho.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/next-ecommerce'
     },
     {
@@ -49,13 +49,13 @@ export const projects: Project[] = [
             '/images/skills/mysql.png'
         ],
         urlImg: '/images/projects/challenge.jpg',
-        urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
+        //urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/alkemy-challenge-fullstack'
     },
     {
         title: 'Chat',
         description: 'Build Realtime chat using Vue 3, Quasar Framework, Realtime Database Firebase.',
-        width: '50%',
+        width: '30%',
         stack: [
             '/images/skills/quasar.png',
             '/images/skills/firebase.svg',
@@ -65,9 +65,22 @@ export const projects: Project[] = [
         urlGithub: 'https://github.com/FrancoAguirre644/chat-app-quasar'
     },
     {
+        title: 'My portfolio',
+        description: 'My personal portfolio using React, Material UI and Typescript.',
+        width: '30%',
+        stack: [
+            '/images/skills/react.svg',
+            '/images/skills/material-ui.svg',
+            '/images/skills/typescript.svg',
+        ],
+        urlImg: '/images/projects/portfolio.jpg',
+        urlProduction: 'https://my-portfolio-red-seven.vercel.app/',
+        urlGithub: 'https://github.com/FrancoAguirre644/my-portfolio'
+    },
+    {
         title: 'Food order',
         description: 'Online Food Order App on React Native using Typescript.',
-        width: '50%',
+        width: '40%',
         stack: [
             '/images/skills/react.svg',
             '/images/skills/typescript.svg',
