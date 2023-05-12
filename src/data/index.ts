@@ -22,7 +22,7 @@ export const projects: Project[] = [
             '/images/skills/mongodb.svg'
         ],
         urlImg: '/images/projects/blog.jpg',
-        //urlProduction: 'https://mern-blog-app-five.vercel.app/',
+        urlProduction: 'https://mern-blog-app-five.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/mern-blog-app'
     },
     {
@@ -35,7 +35,7 @@ export const projects: Project[] = [
             '/images/skills/mongodb.svg'
         ],
         urlImg: '/images/projects/ecommerce.jpg',
-        //urlProduction: 'https://next-ecommerce-rho.vercel.app/',
+        urlProduction: 'https://next-ecommerce-rho.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/next-ecommerce'
     },
     {
