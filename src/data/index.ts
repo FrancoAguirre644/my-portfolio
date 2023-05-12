@@ -49,7 +49,7 @@ export const projects: Project[] = [
             '/images/skills/mysql.png'
         ],
         urlImg: '/images/projects/challenge.jpg',
-        //urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
+        urlProduction: 'https://alkemy-challenge-fullstack.vercel.app/',
         urlGithub: 'https://github.com/FrancoAguirre644/alkemy-challenge-fullstack'
     },
     {
